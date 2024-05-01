@@ -11,7 +11,7 @@ mongoose
   .catch(() => {
     console.log("connectionn faild");
   });
-const port = process.env.PORT || 6600;
-app.listen(port, () => {
-  console.log(`app running on port ${port}`);
+
+app.listen(4000, () => {
+  console.log(`app running on port 4000`);
 });
