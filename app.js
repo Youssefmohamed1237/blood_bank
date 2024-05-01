@@ -1,0 +1,14 @@
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const compression = require("compression");
+const globalErrorHandler = require("./controller/globalcontroller");
+const donorroute = require("./routs/donorrouter");
+const needroute = require("./routs/needrouter");
+app.use(express.json());
+app.use(cors());
+app.use(compression());
+app.use("/api/donor", donorroute);
+app.use("/api/need", needroute);
+app.use(globalErrorHandler);
+module.exports = app;
